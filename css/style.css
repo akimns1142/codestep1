@@ -1,0 +1,346 @@
+/* 共通 */
+.sp_only{
+  display: none;
+}
+body{
+  background-color: #f0f0f0;
+  color: #000;
+  font-size:0.8em;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom:120px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2{
+  font-size: 3em;
+  letter-spacing: 0.3em;
+  position: relative;
+  padding:0 0 30px;
+  margin-bottom:50px;
+  margin-left: 15px;
+}
+.ja {
+  display: block;
+  font-size: 0.4em;
+  letter-spacing: 0;
+  margin-top:0.8em;
+}
+h2 :after {
+  content: '';
+  width: 3em;
+  height: 0;
+  border-top: 1px solid;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/* end of 共通 */
+
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-left:15px;
+}
+.header-left {
+  width:100%;
+  max-width:1000px ;
+  display: flex;
+  margin: 0 auto;
+  align-items: center
+}
+.logo{
+  width: 100px;
+}
+.logo img{
+  width: 100%;
+}
+nav{
+  margin-left:30px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding-left: 25px;
+    letter-spacing: 0.1em;
+    font-size: 1.1em;
+}
+.header-right {
+    width: 200px;
+}
+
+.header-right a {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+}
+.main-visual img {
+  width: 100%;
+  height: calc(100vh - 80px) ;
+  object-fit: cover;
+}
+section#NEWS {
+  padding-top: 150px;
+}
+span.square {
+  background-color: #000;
+  color: #fff;
+  padding: 0 5px;
+  margin-left: 10px;
+}
+.date {
+  padding: 20px 0;
+}
+.card li {
+    border-left: solid 1px;
+    padding: 0 15px 15px;
+    margin: 0 0 30px 0;
+}
+.card li:first-child {
+    border: none;
+}
+section#ABOUT {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom:120px;
+}
+.sub-visual {
+    width: 55%;
+}
+.sub-visual img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+}
+.txt {
+    width: 45%;
+    box-sizing: border-box;
+    padding: 180px 5% 0;
+}
+.about h2{
+  margin: 0px 0 45px;
+}
+.about p {
+  font-size: 1.1em;
+  line-height: 2em;
+}
+.txt p:first-child {
+    padding-top: 50px;
+}
+.business-imgbox1,.business-imgbox2{
+  /* border:1px solid red; */
+  width:370px;
+  margin:0 30px;
+}
+.business-imgbox1{
+  padding-top:100px;
+}
+h3 {
+    font-weight: bold;
+    padding: 15px 0 15px 1.5em;
+    position: relative;
+}
+h3::before {
+    content: '';
+    position: absolute;
+    width: 0.8em;
+    border-top: solid 1px;
+    left: 0;
+    top: 44%;
+}
+
+.business .flex {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.imgbox img {
+    width: 100%;
+}
+section#COMPANY{
+  position: relative;
+  padding-bottom: 110px;
+}
+.company_ttlandtxt {
+    width: 44%;
+    background-color: #fff;
+    padding: 100px 60px;
+}
+
+.company dt {
+    width: 20%;
+}
+
+.company dl.flex {
+    flex-wrap: wrap;
+}
+
+.company dd {
+    width: 80%;
+}
+dd.add{
+  margin-left: 20%;
+}
+
+.company dd,.company dt {
+    line-height: 2em;
+    font-size: 1.2em;
+}
+.company_img {
+    width: 53%;
+    max-width: 600px;
+    /* float: right; */
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 125px;
+}
+
+.company_img img {
+    height: 400px;
+    width:100%;
+    object-fit: cover;
+
+}
+
+
+
+/* header,.main-visual,section#NEWS,section#ABOUT,section#BUSINESS {
+  display: none;
+} */
+
+
+footer{
+  background-color:#fff;
+  padding:0 0 20px 15px;
+}
+footer .wrapper{
+  padding-bottom:0;
+}
+footer .flex{
+  padding:40px 0;
+}
+footer p {
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+footer small{
+  font-size: 0.7em;
+}
+
+
+/* レスポンシブ　SP表示ここから */
+@media (max-width:900px){
+  .sp_only{
+    display:block;
+  }
+  .pc_only{
+    display: none;
+  }
+  .wrapper{
+    width:90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+  .flex {
+    display: block;
+  }
+  h2{
+     margin-left:0;
+   }
+   .header-left {
+    display: block;
+  }
+  .header .logo img{
+    margin-top:15px;
+  }
+  nav {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  nav ul li:first-child {
+    padding-left: 0;
+  }
+  .sub-visual img {
+    height: 300px;
+  }
+  .card li {
+      border: none;
+  }
+  section#NEWS {
+    padding: 50px 0 ;
+  }
+  section#ABOUT {
+      display: block;
+      padding-bottom: 50px;
+  }
+  .txt{
+    padding:60px 5% 0;
+    width: 100%;
+  }
+  .sub-visual {
+      width: 100%;
+  }
+
+  .business-imgbox1, .business-imgbox2 {
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+  }
+  .imgbox img {
+      width: 90%;
+      height: 100%;
+      margin-left: 3em;
+  }
+  .company_ttlandtxt {
+    box-sizing: border-box;
+    padding:50px 17px ;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .company_img {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    background-color: brown;
+  }
+  .company dd{
+    margin:0 0 0 1em;
+  }
+
+  section#COMPANY {
+      padding-bottom: 0;
+  }
+  footer .flex{
+    padding:20px 0;
+  }
+  footer .logo{
+    padding-bottom:15px;
+    width: 85px;
+  }
+}
+@media (max-width:300px){
+  .main-visual img {
+    height: 300px;
+  }
+}
